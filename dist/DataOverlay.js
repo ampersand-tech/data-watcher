@@ -21,7 +21,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.DataOverlay = exports.DataOverlayContext = void 0;
 var dataOverlay_1 = require("data-store/dist/dataOverlay");
 var DataStore = require("data-store/dist/dataStore");
-var PropTypes = require("prop-types");
 var React = require("react");
 exports.DataOverlayContext = React.createContext(DataStore);
 var DataOverlay = /** @class */ (function (_super) {
@@ -50,10 +49,6 @@ var DataOverlay = /** @class */ (function (_super) {
         return (React.createElement(exports.DataOverlayContext.Provider, { value: this._overlay }, this.props.children));
     };
     DataOverlay.contextType = exports.DataOverlayContext;
-    DataOverlay.propTypes = {
-        dataStore: PropTypes.object,
-        children: PropTypes.element.isRequired,
-    };
     return DataOverlay;
 }(React.Component));
 exports.DataOverlay = DataOverlay;

@@ -4,7 +4,6 @@
 
 import { Overlay } from 'data-store/dist/dataOverlay';
 import * as DataStore from 'data-store/dist/dataStore';
-import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
 export const DataOverlayContext = React.createContext<DataStore.IDataStore>(DataStore);
@@ -12,11 +11,6 @@ export const DataOverlayContext = React.createContext<DataStore.IDataStore>(Data
 export class DataOverlay extends React.Component<React.PropsWithChildren<{ dataStore?: Overlay }>, {}> {
   static contextType = DataOverlayContext;
   declare context: React.ContextType<typeof DataOverlayContext>;
-
-  static readonly propTypes = {
-    dataStore: PropTypes.object,
-    children: PropTypes.element.isRequired,
-  };
 
   private _overlay: Overlay;
 
