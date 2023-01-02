@@ -1,6 +1,6 @@
 {
   "name": "data-watcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "DataWatcher base React class",
   "main": "dist/DataWatcher.js",
   "types": "dist/DataWatcher.d.ts",

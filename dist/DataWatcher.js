@@ -126,7 +126,7 @@ var DataWatcher = /** @class */ (function (_super) {
         };
         return _this;
     }
-    DataWatcher.prototype.componentWillMount = function () {
+    DataWatcher.prototype.UNSAFE_componentWillMount = function () {
         this._hasState = this.state && Object.keys(this.state).length > 0;
         this._origRender = this.render;
         this.render = this.renderWrapper;

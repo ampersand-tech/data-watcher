@@ -28,7 +28,7 @@ export declare class DataWatcher<P = {}, S = {}> extends React.Component<P, S> i
     private _inRender;
     private _origRender?;
     private _dataChanges;
-    componentWillMount(): void;
+    UNSAFE_componentWillMount(): void;
     getDataStore(): DataStore.IDataStore;
     getOverlay(): Overlay;
     componentWillUnmount(): void;

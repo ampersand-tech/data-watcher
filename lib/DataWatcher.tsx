@@ -73,7 +73,7 @@ export class DataWatcher<P = {}, S = {}> extends React.Component<P, S> implement
   private _origRender?: (any) => any;
   private _dataChanges: any[] = [];
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._hasState = this.state && Object.keys(this.state).length > 0;
     this._origRender = this.render;
     this.render = this.renderWrapper;
