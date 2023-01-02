@@ -31,11 +31,11 @@ var DataOverlay = /** @class */ (function (_super) {
     DataOverlay.prototype.getOverlay = function () {
         return this._overlay;
     };
-    DataOverlay.prototype.componentWillMount = function () {
+    DataOverlay.prototype.UNSAFE_componentWillMount = function () {
         var _a;
         this._overlay = (_a = this.props.dataStore) !== null && _a !== void 0 ? _a : new dataOverlay_1.Overlay(this.context);
     };
-    DataOverlay.prototype.componentWillUpdate = function (newProps) {
+    DataOverlay.prototype.UNSAFE_componentWillUpdate = function (newProps) {
         if (this.props.dataStore !== newProps.dataStore) {
             console.error('The props of <DataOverlay> cannot be changed midrun');
         }

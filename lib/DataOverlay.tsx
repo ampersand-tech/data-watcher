@@ -18,11 +18,11 @@ export class DataOverlay extends React.Component<React.PropsWithChildren<{ dataS
     return this._overlay;
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this._overlay = this.props.dataStore ?? new Overlay(this.context);
   }
 
-  componentWillUpdate(newProps) {
+  UNSAFE_componentWillUpdate(newProps) {
     if (this.props.dataStore !== newProps.dataStore) {
       console.error('The props of <DataOverlay> cannot be changed midrun');
     }

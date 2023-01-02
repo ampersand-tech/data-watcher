@@ -12,8 +12,8 @@ export declare class DataOverlay extends React.Component<React.PropsWithChildren
     context: React.ContextType<typeof DataOverlayContext>;
     private _overlay;
     getOverlay(): Overlay;
-    componentWillMount(): void;
-    componentWillUpdate(newProps: any): void;
+    UNSAFE_componentWillMount(): void;
+    UNSAFE_componentWillUpdate(newProps: any): void;
     componentWillUnmount(): void;
     render(): JSX.Element;
 }
